@@ -26,7 +26,7 @@ namespace WerkRoom
         public static Heather GenerateHeather()
         {
             Random rand = new Random();
-            string heatherName = DragNames.GetHeatherDragName();
+            string heatherName = DragNames.GetHeatherDragName(true, 0);
             Speciality heatherSpecial = new Speciality(GenerateHeatherSpecial(heatherName));
             return new Heather(heatherName, rand.Next(0, 21), rand.Next(5, 21),
                 rand.Next(60, 201), rand.Next(21, 40), heatherSpecial, rand.Next(10, 31));

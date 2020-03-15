@@ -20,7 +20,7 @@ namespace WerkRoom
             "Mariah Dontcarey",
             "Helen Isa Troy",
             "Shay D",
-            "Alliston Chains,",
+            "Alliston Chains",
             "Anita Procedure",
             "April Showers",
             "Eileen Sideways",
@@ -45,7 +45,7 @@ namespace WerkRoom
             return dragNames[new Random().Next(0, dragNames.Length)];
         }
 
-        public static string GetHeatherDragName()
+        public static string GetHeatherDragName(bool isForGenerator, byte arraySpot)
         {
             string[] dragNames =
             {
@@ -96,7 +96,14 @@ namespace WerkRoom
                 "Tatianna",
                 "Willam"
             };
-            return dragNames[new Random().Next(0, dragNames.Length)];
+            if (isForGenerator)
+            {
+                return dragNames[new Random().Next(0, dragNames.Length)];
+            }
+            else
+            {
+                return dragNames[arraySpot];
+            }
         }
     }
 }
